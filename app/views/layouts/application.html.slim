@@ -2,18 +2,20 @@ doctype html
 html
   head
     title Pinx
-    == stylesheet_link_tag    'application', media: 'all',
-                                             'data-turbolinks-track' => true
-    == javascript_include_tag 'application', 'data-turbolinks-track' => true
-    == csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all',
+                                            'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
 
   body
     header
-      div == link_to 'Pinx', '#', id: 'logo'
+      div = link_to 'Pinx', '#', id: 'logo'
       div.nav
         ul
-          li == link_to 'Signin',  '#'
-          li == link_to 'Signout', '#'
+          - unless logged_in?
+            li = link_to 'Signin',  signin_path
+          - else
+            li = link_to 'Signout', signout_path, method: :delete
 
     section.main
 

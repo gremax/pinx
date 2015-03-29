@@ -1,0 +1,8 @@
+h1 Sign in
+
+div.signup
+  = simple_form_for :session do |f|
+    = f.input :username, placeholder: "Username", label: false
+    = f.input :password, placeholder: "Password", label: false
+    = f.submit "Sign in"
+  = link_to 'Don\'t have an account?', signup_path

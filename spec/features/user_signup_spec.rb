@@ -2,7 +2,8 @@ require 'rails_helper'
 
 feature 'User signup' do
   before do
-    visit signup_path
+    visit signin_path
+    click_on ('Don\'t have an account?')
   end
 
   scenario 'with valid information' do
@@ -11,8 +12,7 @@ feature 'User signup' do
     fill_in 'Password', with: 'foobar'
     fill_in 'Confirm password', with: 'foobar'
     expect { click_button 'Sign up' }.to change(User, :count).by(1)
-    expect(page).to have_content('Welcome aboard!')
-    expect(page).to have_content('foobar')
+    expect(page).to have_content('Welcome aboard, foobar!')
   end
 
   scenario 'with invalid information' do
