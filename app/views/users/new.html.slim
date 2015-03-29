@@ -1,0 +1,9 @@
+h1 Sign up
+
+div.signup
+  = simple_form_for @user do |f|
+    = f.input :username, placeholder: "Username", label: false
+    = f.input :email, placeholder: "Email", label: false
+    = f.input :password, placeholder: "Password", label: false
+    = f.input :password_confirmation, placeholder: "Confirm password", label: false
+    = f.submit "Sign up"

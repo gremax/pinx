@@ -7,7 +7,10 @@ gem 'uglifier',     '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'normalize-rails'
 gem 'simple_form'
+gem 'slim'
+gem 'bcrypt'
 
 group :development, :test do
   gem 'sqlite3'

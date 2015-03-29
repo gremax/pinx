@@ -1,0 +1,109 @@
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Flash message */
+
+.flash {
+  margin: 0 auto;
+  width: 400px;
+  padding: 10px;
+}
+
+.flash-success {
+  background-color: #9fe1ff;
+  border: 1px solid #1887ce;
+}
+
+.flash-error {
+  background-color: #ffccdd;
+  border: 1px solid #c22934;
+}
+
+/* Header section */
+
+header {
+  width: 768px;
+  height: 40px;
+  margin: 0 auto;
+  #logo {
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #c22934;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+    &:hover {
+      color: #f9636c;
+      text-decoration: none;
+    }
+  }
+  .nav {
+    ul {
+      style: none;
+      li {
+        display: inline;
+        margin-left: 10px;
+      }
+    }
+    float: right;
+  }
+  a {
+    color: #c22934;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Main section */
+
+.main {
+  width: 768px;
+  margin: 0 auto;
+  a {
+    color: #c22934;
+    text-decoration: none;
+    &:hover {
+      color: #921e28;
+      text-decoration: underline;
+    }
+  }
+  h1 {
+    color: #c22934;
+    font-size: 1.6em;
+  }
+}
+
+.signup {
+  width: 400px;
+  margin: 0 auto;
+  input {
+    font-size: 1.3em;
+    width: 100%;
+    padding: 3px;
+    margin: 5px 0;
+  }
+  input[type='submit'] {
+    font-size: 20px;
+    color: #fff;
+    width: 30%;
+    background-color: #c22934;
+    border: none;
+    padding: 10px;
+  }
+  label {
+    font-size: 1.3em;
+    display: block;
+  }
+}
+
+.simple_form .error {
+  color: #ff0000;
+  font-size: 0.9em;
+}
