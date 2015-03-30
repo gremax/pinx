@@ -9,7 +9,7 @@ html
 
   body
     header
-      div = link_to 'Pinx', '#', id: 'logo'
+      div = link_to 'Pinx', root_path, id: 'logo'
       div.nav
         ul
           - unless logged_in?

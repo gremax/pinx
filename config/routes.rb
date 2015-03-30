@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'sessions#new'
   get    'signup'    => 'users#new',        as: :signup
   get    'signin'    => 'sessions#new',     as: :signin
   get    'users/:id' => 'users#show',       as: :user
