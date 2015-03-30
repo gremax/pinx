@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   post   'users'     => 'users#create',     as: :users
   post   'signin'    => 'sessions#create'
   delete 'signout'   => 'sessions#destroy', as: :signout
+  resources :links
 end

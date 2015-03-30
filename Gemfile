@@ -11,6 +11,8 @@ gem 'normalize-rails'
 gem 'simple_form'
 gem 'slim'
 gem 'bcrypt'
+gem 'validate_url'
+gem 'metainspector', git: 'https://github.com/jaimeiniesta/metainspector.git'
 
 group :development, :test do
   gem 'sqlite3'

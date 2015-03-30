@@ -80,14 +80,17 @@ header {
   }
 }
 
-.signup {
+.signup, .new_link, .edit_link {
   width: 400px;
   margin: 0 auto;
-  input {
+  input, textarea {
     font-size: 1.3em;
     width: 100%;
     padding: 3px;
     margin: 5px 0;
+  }
+  textarea {
+    resize: vertical;
   }
   input[type='submit'] {
     font-size: 20px;
@@ -106,4 +109,40 @@ header {
 .simple_form .error {
   color: #ff0000;
   font-size: 0.9em;
+}
+
+.new_link_btn {
+    color: #fff;
+    background-color: #c22934;
+    padding: 5px;
+    border-radius: 5px;
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+/* Links section */
+
+.bookmark {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  .link {
+    float: left;
+  }
+  .options {
+    float: right;
+    ul {
+      li {
+        display: inline;
+        list-style: none;
+      }
+    }
+    a {
+      margin-left: 10px;
+    }
+  }
+  .about {
+    clear: both;
+  }
 }
