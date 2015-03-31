@@ -1,7 +1,9 @@
 h1 Edit link
 
 = simple_form_for @link do |f|
-  = f.input :url, placeholder: "Site url", label: false
-  = f.input :title, placeholder: "Site title", label: false
-  = f.input :about, placeholder: "Site description", label: false
+  = f.input :url,      placeholder: "Site url",         label: false
+  = f.input :title,    placeholder: "Site title",       label: false
+  = f.input :about,    placeholder: "Site description", label: false
+  = f.input :tag_list, placeholder: "Tags (separated by commas)",
+                       label: false, value: @link.tag_list.to_s
   = f.submit "Save link"

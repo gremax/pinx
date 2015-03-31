@@ -1,0 +1,18 @@
+- @links.each do |link|
+  div.bookmark id="link_#{link.id}"
+    div.link = link_to link.title, link.url
+    div.options
+        = link_to 'Edit',   edit_link_path(link)
+        = link_to 'Delete', link_path(link), method: :delete,
+                  data: { confirm: "Are you sure?" }
+    div.about
+      - if link.about
+        = link.about
+    div.tags
+      - if link.tag_list.any?
+         ' Tags:
+         = raw link.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
+
+div#tag_cloud
+  - tag_cloud @links.tag_counts, %w[s m l] do |tag, css_class|
+    = link_to tag.name, tag_path(tag.name), class: css_class

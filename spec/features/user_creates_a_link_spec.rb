@@ -2,8 +2,7 @@ require 'rails_helper'
 
 feature 'User creates a link' do
   before do
-    @user = User.create!(username: 'Foobar', email: 'foobar@example.org',
-                         password: 'password', password_confirmation: 'password')
+    @user = FactoryGirl.create(:user)
     visit signin_path
     fill_in 'Username', with: @user.username
     fill_in 'Password', with: @user.password

@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe LinksController, :type => :controller do
+  before do
+    user = FactoryGirl.create(:user)
+    session[:user_id] = user.id
+  end
+
   describe 'GET #new' do
     it 'responds successfully with an HTTP 200 status code' do
       get :new

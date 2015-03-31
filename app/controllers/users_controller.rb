@@ -14,7 +14,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:success] = "Welcome aboard, #{@user.username}!"
       session[:user_id] = @user.id
-      redirect_to @user
+      redirect_to root_path
     else
       flash.now[:error] = "Form contains some errors"
       render 'new'

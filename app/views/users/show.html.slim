@@ -1,12 +1,1 @@
 h1 = @user.username
-
-- @user.links.each do |link|
-  div.bookmark id="link_#{link.id}"
-    div.link = link_to link.title, link.url
-    div.options
-        = link_to 'Edit',   edit_link_path(link)
-        = link_to 'Delete', link_path(link), method: :delete,
-                  data: { confirm: "Are you sure?" }
-    div.about
-      - if link.about
-        = link.about

@@ -13,6 +13,7 @@ gem 'slim'
 gem 'bcrypt'
 gem 'validate_url'
 gem 'metainspector', git: 'https://github.com/jaimeiniesta/metainspector.git'
+gem 'acts-as-taggable-on'
 
 group :development, :test do
   gem 'sqlite3'
@@ -24,4 +25,5 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'capybara'
+  gem 'factory_girl_rails'
 end

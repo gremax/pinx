@@ -11,6 +11,10 @@ module SessionsHelper
   private
 
   def signed_in?
-    redirect_to user_path(session[:user_id]) if logged_in?
+    redirect_to root_path if logged_in?
+  end
+
+  def not_signed_in?
+    redirect_to signin_path unless logged_in?
   end
 end
