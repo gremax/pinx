@@ -23,7 +23,12 @@ group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'guard-rspec'
-  gem 'rb-fsevent' if `uname` =~ /Darwin/
   gem 'capybara'
   gem 'factory_girl_rails'
+end
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+  gem 'puma'
 end
