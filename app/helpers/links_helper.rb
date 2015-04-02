@@ -2,7 +2,7 @@ module LinksHelper
 
   def get_title_and_url(url)
     @page = MetaInspector.new(url)
-    return @page.title, @page.url
+    return @page.title.strip, @page.url
   end
 end
 

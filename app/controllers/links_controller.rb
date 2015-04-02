@@ -5,7 +5,7 @@ class LinksController < ApplicationController
     if params[:tag]
       @links = current_user.links.tagged_with(params[:tag])
     else
-      @links = current_user.links
+      @links = current_user.links.order('id DESC')
     end
   end
 
