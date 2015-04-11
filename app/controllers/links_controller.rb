@@ -18,18 +18,18 @@ class LinksController < ApplicationController
     @link.title, @link.url = get_title_and_url(@link.url) if @link.valid?
     if @link.save
       flash[:success] = "New link successfully added"
-      redirect_to root_path
+      redirect_to edit_link_path(@link)
     else
       render 'new'
     end
   end
 
   def edit
-    @link = Link.find_by(id: params[:id])
+    @link = current_user.links.find_by(id: params[:id])
   end
 
   def update
-    @link = Link.find_by(id: params[:id])
+    @link = current_user.links.find_by(id: params[:id])
     if @link.update_attributes(link_params)
       flash[:success] = "Link successfully updated"
       redirect_to root_path
@@ -40,8 +40,8 @@ class LinksController < ApplicationController
   end
 
   def destroy
-    Link.destroy(params[:id])
-    redirect_to current_user
+    current_user.links.destroy(params[:id])
+    redirect_to root_path
   end
 
   private

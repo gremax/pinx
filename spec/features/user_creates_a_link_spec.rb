@@ -2,12 +2,12 @@ require 'rails_helper'
 
 feature 'User creates a link' do
   before do
-    @user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user)
     visit signin_path
-    fill_in 'Username', with: @user.username
-    fill_in 'Password', with: @user.password
+    fill_in 'Username', with: user.username
+    fill_in 'Password', with: user.password
     click_button 'Sign in'
-    expect(page).to have_content("Welcome back, #{@user.username}")
+    expect(page).to have_content("Welcome back, #{user.username}")
   end
 
   scenario 'add a new bookmark with a blank field' do

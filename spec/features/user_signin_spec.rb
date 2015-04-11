@@ -2,8 +2,7 @@ require 'rails_helper'
 
 feature 'User signin' do
   before do
-    @user = User.create!(username: 'Foobar', email: 'foobar@example.org',
-                         password: 'password', password_confirmation: 'password')
+    @user = FactoryGirl.create(:user)
     visit signup_path
     click_on ('Already have an account')
   end

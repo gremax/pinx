@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'validate_url'
 gem 'metainspector', git: 'https://github.com/jaimeiniesta/metainspector.git'
 gem 'acts-as-taggable-on'
+gem 'strip_attributes'
 
 group :development, :test do
   gem 'sqlite3'
